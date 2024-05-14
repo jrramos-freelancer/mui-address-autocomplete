@@ -168,22 +168,22 @@ const AddressAutocomplete = _ref => {
   };
 
   // Load Google Maps API script if not already loaded
-  (0, _react.useEffect)(() => {
-    if (typeof window !== 'undefined' && !loaded.current) {
-      if (!document.querySelector('#google-maps')) {
-        var _document$querySelect;
-        const script = document.createElement('script');
-        if (!apiKey) {
-          console.error('You need to provide an API key to use this component');
-        }
-        script.setAttribute('async', '');
-        script.setAttribute('id', 'google-maps');
-        script.src = "https://maps.googleapis.com/maps/api/js?key=".concat(apiKey, "&libraries=places");
-        (_document$querySelect = document.querySelector('head')) === null || _document$querySelect === void 0 ? void 0 : _document$querySelect.appendChild(script);
-      }
-      loaded.current = true;
-    }
-  }, [apiKey, loaded]);
+  // (0, _react.useEffect)(() => {
+  //   if (typeof window !== 'undefined' && !loaded.current) {
+  //     if (!document.querySelector('#google-maps')) {
+  //       var _document$querySelect;
+  //       const script = document.createElement('script');
+  //       if (!apiKey) {
+  //         console.error('You need to provide an API key to use this component');
+  //       }
+  //       script.setAttribute('async', '');
+  //       script.setAttribute('id', 'google-maps');
+  //       script.src = "https://maps.googleapis.com/maps/api/js?key=".concat(apiKey, "&libraries=places");
+  //       (_document$querySelect = document.querySelector('head')) === null || _document$querySelect === void 0 ? void 0 : _document$querySelect.appendChild(script);
+  //     }
+  //     loaded.current = true;
+  //   }
+  // }, [apiKey, loaded]);
 
   // Autocomplete predictions fetcher
   const fetch = (0, _react.useMemo)(() => (0, _lodash.default)((request, callback) => {
